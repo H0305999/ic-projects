@@ -1,0 +1,10 @@
+# 仿真产物：波形、可执行模型，不进版本库
+*.vcd
+*.vvp
+*_sim
+*.out
+
+# 编辑器/系统临时文件
+*.swp
+.DS_Store
+Thumbs.db
