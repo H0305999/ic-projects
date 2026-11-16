@@ -5,7 +5,7 @@ cd /d %~dp0verilog
 
 echo ============================================================
 echo  SOURCE CHECK - the parameter line actually in sync_fifo.v :
-findstr /C:"parameter AW" sync_fifo.v
+%SystemRoot%\System32\findstr.exe /C:"parameter AW" sync_fifo.v
 echo  ^(that number is what this run really synthesizes^)
 echo ============================================================
 echo.
