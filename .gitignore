@@ -3,6 +3,8 @@
 *.vvp
 *_sim
 *.out
+verilog/rtl.log
+verilog/gl.log
 
 # 编辑器/系统临时文件
 *.swp
