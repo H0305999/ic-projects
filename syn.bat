@@ -8,7 +8,10 @@ cd /d %~dp0verilog
 if errorlevel 1 (
   echo Synthesis FAILED - see verilog\synth.log for the error
 ) else (
-  echo Synthesis OK. Report = verilog\synth.log, netlist = verilog\sync_fifo_netlist.v
-  findstr /C:"cells" synth.log
+  echo ============================================================
+  echo  Synthesis OK.  ==== CELL COUNT SUMMARY ====
+  "%PYEXE%" -c "log=open('synth.log',encoding='utf-8',errors='ignore').read(); i=log.find('Printing statistics'); print(log[i:i+900] if i>=0 else 'stat not found')"
+  echo ============================================================
+  echo  Full report = verilog\synth.log    Netlist = verilog\sync_fifo_netlist.v
 )
 pause
