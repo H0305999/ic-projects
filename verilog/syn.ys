@@ -1,0 +1,6 @@
+# 第一次综合脚本：把 sync_fifo 翻译成"门"
+read_verilog sync_fifo.v
+hierarchy -check -top sync_fifo
+synth -top sync_fifo -flatten
+stat
+write_verilog -noattr sync_fifo_netlist.v
